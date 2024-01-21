@@ -105,7 +105,11 @@ describe("anchor-lut", () => {
     const messageV0 = new anchor.web3.TransactionMessage({
       payerKey: provider.wallet.publicKey,
       recentBlockhash: blockhash,
-      instructions: [ix1, ix2, ix3], // note this is an array of instructions
+      instructions: [
+        ix1, 
+        ix2, 
+        ix3
+      ], // note this is an array of instructions
     }).compileToV0Message([lookupTableAccount]);
 
     // create a v0 transaction from the v0 message
@@ -116,7 +120,7 @@ describe("anchor-lut", () => {
 
     // send and confirm the transaction
     // (NOTE: There is NOT an array of Signers here;)
-    const txid = await sendAndConfirmTransaction(provider.connection, transactionV0);
+    const txid = await provider.connection.sendTransaction(transactionV0);
     console.log("\n\nTransaction confirmed - TxID: ", txid);
   })
 
