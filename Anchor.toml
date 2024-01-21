@@ -5,7 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-anchor_lut = "387hciuQ436coWhx5QFBAKihMSL1PeQCYPAiDGvrVcMX"
+anchor_lut = "nxNZdVsRAZSoo4JiR2PqUDxckM7RFRjfYhzsCDggdAv"
 
 [registry]
 url = "https://api.apr.dev"
