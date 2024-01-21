@@ -1,8 +1,7 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { AnchorLut } from "../target/types/anchor_lut";
-import { AddressLookupTableProgram, Keypair, PublicKey, sendAndConfirmTransaction } from "@solana/web3.js";
-import { Node } from "typescript";
+import { AddressLookupTableProgram, PublicKey } from "@solana/web3.js";
 import NodeWallet from "@coral-xyz/anchor/dist/cjs/nodewallet";
 
 describe("anchor-lut", () => {
